@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&family=Noto+Sans+Telugu:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-telugu-head: "Ramabhadra", sans-serif;
+  --font-telugu-body: "Noto Sans Telugu", sans-serif;
+}
