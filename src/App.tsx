@@ -67,7 +67,7 @@ export default function App() {
                     </div>
                     <div>
                       <p className="text-xs font-bold text-gray-400 uppercase">ఫోన్</p>
-                      <p className="font-bold">+91 40 1234 5678</p>
+                      <p className="font-bold">+91 6281256601</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -76,7 +76,7 @@ export default function App() {
                     </div>
                     <div>
                       <p className="text-xs font-bold text-gray-400 uppercase">చిరునామా</p>
-                      <p className="font-bold">హైదరాబాద్, తెలంగాణ, భారతదేశం.</p>
+                      <p className="font-bold">13-3-1049 indranagar karwan hyderabad, 500006 Hyderabad</p>
                     </div>
                   </div>
                 </div>
@@ -296,7 +296,11 @@ export default function App() {
                   <h2 className="text-3xl font-bold leading-tight mb-2 group-hover:text-[#C00000] transition-colors">
                     {data.news[0].title}
                   </h2>
-                  <p className="text-gray-600 text-sm mb-2">{data.news[0].date}</p>
+                  <div className="flex items-center gap-2 text-gray-600 text-sm mb-2">
+                    <span className="font-bold text-[#C00000]">{data.news[0].author || 'Harish'}</span>
+                    <span>•</span>
+                    <span>{data.news[0].date}</span>
+                  </div>
                   <p className="text-gray-700 leading-relaxed">
                     {data.news[0].summary}
                   </p>
@@ -347,6 +351,11 @@ export default function App() {
                         <h3 className="text-lg font-bold leading-tight group-hover:text-[#C00000] transition-colors">
                           {item.title}
                         </h3>
+                        <div className="flex items-center gap-2 text-xs text-gray-400 mb-1">
+                          <span className="font-bold text-[#C00000]">{item.author || 'Harish'}</span>
+                          <span>•</span>
+                          <span>{item.date}</span>
+                        </div>
                         <p className="text-gray-500 text-xs hidden md:block">
                           {item.summary.substring(0, 100)}...
                         </p>
@@ -510,19 +519,19 @@ export default function App() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-[#C00000] shrink-0" />
-                  <span>+91 40 1234 5678</span>
+                  <span>+91 6281256601</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#C00000] shrink-0" />
-                  <span>హైదరాబాద్, తెలంగాణ, భారతదేశం.</span>
+                  <span className="leading-relaxed">13-3-1049 indranagar karwan hyderabad, 500006 Hyderabad</span>
                 </li>
               </ul>
             </div>
           </div>
           
           <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-[10px] text-gray-500 uppercase tracking-widest">
-              © {new Date().getFullYear()} SONAWALE.COM - అన్ని హక్కులు ప్రత్యేకించబడ్డాయి.
+            <div className="text-[10px] text-gray-500 uppercase tracking-widest leading-relaxed">
+              © {new Date().getFullYear()} SONAWALE.COM - Owned by Xconsult media and marketing Pvt Ltd. Hyderabad Abids, Head office Shamshabad.
             </div>
             <div className="flex gap-6 text-[10px] text-gray-500 uppercase tracking-widest">
               <span className="hover:text-white cursor-pointer">Sitemap</span>
